@@ -731,7 +731,7 @@ class ChatBot {
                     <div class="chatbot-header">
                         <div class="chatbot-title">
                             <span class="title-icon">🎓</span>
-                            <span>M11309907淑蕙 AI課程聊天BOT</span>
+                            <span>M11309907淑蕙AI課程聊天BOT</span>
                         </div>
                         <div class="chatbot-header-buttons">
                             <button class="chatbot-btn clear-btn" id="clearChatBtn" title="Clear chat history">
