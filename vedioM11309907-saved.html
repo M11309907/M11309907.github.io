@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牛排科學探索：從熟成到烹調的奧秘</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        steak: {
+                            50: '#fff1f1',
+                            100: '#ffe1e1',
+                            200: '#ffc7c7',
+                            300: '#ffa0a0',
+                            400: '#ff6969',
+                            500: '#f83b3b',
+                            600: '#e51d1d',
+                            700: '#c11414',
+                            800: '#a01414',
+                            900: '#841818',
+                            950: '#480707',
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f0a0a;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #ff6969 0%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 105, 105, 0.3), transparent);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #480707;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #841818;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Hero Header -->
+    <header class="relative pt-12 pb-8 px-6 text-center">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-64 bg-steak-900/20 blur-[120px] rounded-full -z-10"></div>
+        <h1 class="font-display text-5xl md:text-7xl font-bold tracking-tight mb-4 animate-fade-in">
+            The Science of <span class="text-gradient">Steak</span>
+        </h1>
+        <p class="text-steak-200/80 max-w-2xl mx-auto text-lg md:text-xl font-light animate-fade-in" style="animation-delay: 0.2s">
+            從分子層面解析極致美味：熟成、梅納反應與現代烹調工藝
+        </p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 md:px-8 space-y-24 pb-20">
+
+        <!-- Top Section: Infographic -->
+        <section class="animate-fade-in" style="animation-delay: 0.4s">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-2 h-8 bg-steak-500 rounded-full"></div>
+                <h2 class="text-2xl md:text-3xl font-display font-bold">科學資訊圖表 <span class="text-sm font-normal text-steak-400 block md:inline md:ml-2">Visualizing Steak Chemistry</span></h2>
+            </div>
+            <div class="glass-card overflow-hidden shadow-2xl ring-1 ring-white/10 group transition-all duration-500 hover:ring-steak-500/50">
+                <img src='https://opal.google/board/blobs/ae6e1ff7-95b5-40d1-9256-57194d7b0874' alt='Steak Science Infographic' class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-[1.02]" />
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Middle Section: Video & Audio -->
+        <section class="relative">
+            <div class="absolute -right-20 top-0 w-64 h-64 bg-amber-500/10 blur-[100px] rounded-full -z-10"></div>
+            
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-2 h-8 bg-amber-500 rounded-full"></div>
+                <h2 class="text-2xl md:text-3xl font-display font-bold">視聽科學體驗 <span class="text-sm font-normal text-amber-400 block md:inline md:ml-2">Audio-Visual Insight</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Video Container -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-2 shadow-2xl">
+                        <div class="aspect-video rounded-[18px] overflow-hidden bg-black relative group">
+                            <video src='https://opal.google/board/blobs/0f7983b2-683b-4760-88ae-929a2eb71e19' class="w-full h-full object-cover" controls></video>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio & Summary Container -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card p-8 border-l-4 border-l-amber-500">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                            </svg>
+                            背景配樂
+                        </h3>
+                        <div class="bg-black/40 rounded-full px-4 py-2 mb-6">
+                            <audio src='https://opal.google/board/blobs/1183fd6a-04ca-4400-967a-ed7ed6e9330a' class="w-full h-10" controls></audio>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-amber-400">摘要 Highlight</h4>
+                            <ul class="space-y-3 text-sm md:text-base text-gray-300">
+                                <li class="flex gap-2">
+                                    <span class="text-amber-500 font-bold">01</span>
+                                    <span>熟成過程透過內源性蛋白酶提升肉質嫩度。</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-amber-500 font-bold">02</span>
+                                    <span>AI 與高光譜技術讓品質評級更精準客觀。</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-amber-500 font-bold">03</span>
+                                    <span>舒肥法精確控制蛋白質變性，極大化嫩度。</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Bottom Section: Report Content -->
+        <section class="space-y-12">
+            <div class="flex flex-col items-center text-center mb-12">
+                <div class="px-4 py-1 rounded-full bg-steak-900/50 border border-steak-500/30 text-steak-400 text-xs font-bold uppercase tracking-[0.2em] mb-4">The Deep Dive</div>
+                <h2 class="text-3xl md:text-4xl font-display font-bold">主題探索報告</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Section 1 -->
+                <div class="glass-card p-8 hover:bg-white/[0.05] transition-colors group">
+                    <div class="text-steak-500 font-display text-4xl font-bold mb-4 opacity-20 group-hover:opacity-100 transition-opacity">01</div>
+                    <h3 class="text-xl font-bold mb-4 text-white">熟成與梅納反應</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm md:text-base">
+                        熟成是提升嫩度的關鍵。在乾式熟成中，環境中的特定微生物群落（如 <i class="text-steak-300">Pilinia</i> 屬真菌）會代謝脂肪酸，賦予特殊的堅果與起司香氣。而梅納反應在 140°C 至 165°C 發生，產生數百種風味分子。
+                    </p>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="glass-card p-8 hover:bg-white/[0.05] transition-colors group">
+                    <div class="text-steak-500 font-display text-4xl font-bold mb-4 opacity-20 group-hover:opacity-100 transition-opacity">02</div>
+                    <h3 class="text-xl font-bold mb-4 text-white">品質評等與預測技術</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm md:text-base">
+                        產業正從視覺主觀評分過渡到儀器分析。利用<b>高光譜影像 (Hyperspectral Imaging)</b> 結合深度學習，能精確預測脂肪分布與嫩度。和牛與安格斯牛的脂肪酸構成亦是決定口感的關鍵因素。
+                    </p>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="glass-card p-8 hover:bg-white/[0.05] transition-colors group">
+                    <div class="text-steak-500 font-display text-4xl font-bold mb-4 opacity-20 group-hover:opacity-100 transition-opacity">03</div>
+                    <h3 class="text-xl font-bold mb-4 text-white">精準烹調的科學</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm md:text-base">
+                        舒肥法將溫度鎖定在 55°C 至 60°C，減少水分流失並活化組織蛋白酶。反向煎烤法 (Reverse Sear) 則透過先低溫加熱後高溫炙燒，確保熱傳導均勻並達成完美的表面梅納反應。
+                    </p>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="glass-card p-8 hover:bg-white/[0.05] transition-colors group">
+                    <div class="text-steak-500 font-display text-4xl font-bold mb-4 opacity-20 group-hover:opacity-100 transition-opacity">04</div>
+                    <h3 class="text-xl font-bold mb-4 text-white">營養價值與風險管理</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm md:text-base">
+                        原塊牛排與心血管疾病關聯性低。草飼牛含較高 Omega-3 與 CLA。建議烹調溫度不宜超過 200°C，以降低雜環胺 (HCAs) 與多環芳香烴 (PAHs) 等致癌物風險。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="glass-card p-10 bg-gradient-to-br from-steak-950/50 to-transparent border-steak-500/20">
+                <h3 class="text-2xl font-bold mb-4 text-steak-300">簡要結論</h3>
+                <p class="text-lg text-gray-300 leading-relaxed italic">
+                    「透過精準的溫度控制與先進的評級技術，能有效提升牛排的感官評價與營養利用率。在享受美味的同時，正確區分原塊紅肉並採取適當烹調策略，是最小化健康風險的最佳方案。」
+                </p>
+            </div>
+
+            <!-- References -->
+            <div class="mt-12 opacity-60 hover:opacity-100 transition-opacity duration-500">
+                <h4 class="text-sm font-bold uppercase tracking-widest text-steak-400 mb-6">引用文獻來源 References</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 text-xs text-gray-500 font-light">
+                    <p>Domínguez, R., et al. (2019). "Impact of different cooking techniques on meat quality." Foods.</p>
+                    <p>Ismail, I., et al. (2022). "Effects of sous-vide cooking." Food Research International.</p>
+                    <p>Johnston, B. C., et al. (2019). "Unprocessed red meat..." Annals of Internal Medicine.</p>
+                    <p>Kim, Y. H. B., et al. (2021). "Dry-aging of beef..." Meat Science.</p>
+                    <p>Pang, G., et al. (2024). "Application of deep learning..." CRFSFS.</p>
+                    <p>Polkinghorne, R., et al. (2021). "Beef quality and grading..." Animal Frontiers.</p>
+                    <p>Stephan, A., et al. (2023). "Red meat as a nutrient-dense food..." Nutrients.</p>
+                    <p>Zhang, Y., et al. (2023). "Recent advances in Maillard reaction..." Food Chemistry: X.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Footer-like Info Bar (Not a standard legal footer) -->
+        <div class="pt-16 pb-4">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-gray-400 text-sm">
+                <div class="px-6 py-3 glass-card flex items-center gap-4 border-steak-500/30">
+                    <span class="font-bold tracking-widest">【主題探索報告】by <i class="text-steak-500 not-italic font-bold"><span class="italic text-red-600">Sophie</span></i></span>
+                    <span class="w-px h-4 bg-gray-700"></span>
+                    <span class="font-display tracking-tighter">M11309907</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Floating Decor Elements -->
+    <div class="fixed top-1/4 -left-20 w-80 h-80 bg-steak-700/10 blur-[120px] rounded-full -z-20 animate-float"></div>
+    <div class="fixed bottom-1/4 -right-20 w-80 h-80 bg-amber-700/10 blur-[120px] rounded-full -z-20 animate-float" style="animation-delay: -3s"></div>
+
+</body>
+</html>
